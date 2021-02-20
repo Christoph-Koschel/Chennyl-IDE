@@ -1,0 +1,17 @@
+@import "font.css";
+@import "work.css";
+
+:root {
+    --font-size: 13px;
+}
+
+* {
+    font-size: var(--font-size);
+    font-family: Poopins;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+

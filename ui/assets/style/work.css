@@ -1,0 +1,37 @@
+.workGrid {
+    height: 100%;
+    width: 100%;
+    grid-area: body;
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'left middle middle middle middle right'
+        'left middle middle middle middle right';
+    grid-template-rows:
+        25px
+        auto
+        auto
+    ;
+}
+
+.workHeader {
+    background-color: var(--header-content);
+    grid-area: header;
+}
+
+.workLeft {
+    background-color: var(--left-content);
+    grid-area: left;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.workMiddle {
+    background-color: var(--middle-content);
+    grid-area: middle;
+}
+
+.workRight {
+    background-color: var(--right-content);
+    grid-area: right;
+}
