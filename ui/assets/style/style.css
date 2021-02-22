@@ -15,3 +15,32 @@ body {
     margin: 0;
 }
 
+.messageNotification {
+    position: fixed;
+    padding: 20px;
+    bottom: 20px;
+    right: 20px;
+    min-width: 120px;
+    background-color: var(--messageNotification-background);
+    color: var(--messageNotification-color);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 4px -2px var(--messageNotification-shadow-color);
+}
+
+.messageNotification > p {
+    margin:  0 0 5px 0;
+}
+
+.messageNotification > a {
+    color: var(--messageNotification-close-color);
+    cursor: default;
+}
+
+.messageNotification > a:hover {
+    color: var(--messageNotification-close-color-hover);
+}
+
+.container-after-titlebar {
+    overflow: hidden !important;
+}

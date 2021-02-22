@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "dev": "electron . -d"
+    "dev": "electron . -d",
+    "update-module": "npm uninstall chennyl-ide-module && npm install https://github.com/Christoph-Koschel/Chennyl-IDE-Module.git --save-dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chennyl-ide-module": "github:Christoph-Koschel/Chennyl-IDE-Module",
     "electron": "^11.2.3"
   },
   "dependencies": {

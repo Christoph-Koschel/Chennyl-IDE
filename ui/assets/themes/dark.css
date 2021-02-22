@@ -1,8 +1,13 @@
 :root {
     --middle-content: #333333;
-    --left-content: #5c5c5c;
-    --right-content:  #555555;
+    --left-content: #4e4e4e;
     --header-content: #666666;
     --window-background: #ccc;
     --navigation-background: #ffff;
+    --messageNotification-color: #fff;
+    --messageNotification-background: rgb(47, 47, 47);
+    --messageNotification-shadow-color: #fff;
+    --messageNotification-close-color: #00c4c4;
+    --messageNotification-close-color-hover: #009f9f;
+    --tablist-content: green; /* TODO add color */
 }

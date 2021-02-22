@@ -2,8 +2,3 @@
     src: url("../fonts/Poppins-Regular.ttf");
     font-family: "Poopins";
 }
-
-@font-face {
-    src: url("../fonts/Consolas.ttf");
-    font-family: "Consolas";
-}

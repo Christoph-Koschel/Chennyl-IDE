@@ -4,12 +4,17 @@
     grid-area: body;
     display: grid;
     grid-template-areas:
-        'header header header header header header'
-        'left middle middle middle middle right'
-        'left middle middle middle middle right';
+        'header header header header header'
+        'left middle middle middle middle'
+        'left middle middle middle middle';
     grid-template-rows:
         25px
         auto
+        auto
+    ;
+
+    grid-template-columns:
+        250px
         auto
     ;
 }
@@ -29,9 +34,4 @@
 .workMiddle {
     background-color: var(--middle-content);
     grid-area: middle;
-}
-
-.workRight {
-    background-color: var(--right-content);
-    grid-area: right;
 }
