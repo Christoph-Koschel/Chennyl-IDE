@@ -1,0 +1,21 @@
+{
+  "name": "chennyl-ide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . -d",
+    "update-module": "npm uninstall chennyl-ide-module && npm install https://github.com/Christoph-Koschel/Chennyl-IDE-Module.git --save-dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chennyl-ide-module": "github:Christoph-Koschel/Chennyl-IDE-Module",
+    "electron": "^11.2.3"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.6"
+  }
+}
