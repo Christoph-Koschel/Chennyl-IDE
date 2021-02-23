@@ -11,13 +11,13 @@
         25px
         auto
         auto
-    ;
+;
 
     grid-template-columns:
         26px
         250px
         auto
-    ;
+;
 }
 
 .workHeader {
@@ -62,12 +62,12 @@
     grid-template-areas:
         'navbar'
         'writer'
-    ;
+;
     grid-template-columns: auto;
     grid-template-rows:
         22px
         auto
-    ;
+;
 }
 
 .editorNavbar {

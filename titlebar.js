@@ -1,4 +1,5 @@
 const fs = require("fs");
+const {ipcRenderer} = require("electron");
 const {Menu, MenuItem} = require("electron").remote;
 const {Color, Themebar, Titlebar} = require('custom-electron-titlebar');
 
@@ -26,7 +27,8 @@ menu.append(new MenuItem({
     label: "File",
     submenu: [
         {
-            label: "Open"
+            label: "Open",
+            click: () => ipcRenderer.send("titlebar-button", "open")
         }
     ]
 }));

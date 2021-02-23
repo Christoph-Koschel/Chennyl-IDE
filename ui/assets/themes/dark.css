@@ -13,5 +13,5 @@
     --messageNotification-shadow-color: #fff;
     --messageNotification-close-color: #00c4c4;
     --messageNotification-close-color-hover: #009f9f;
-    --tablist-content: green; /* TODO add color */
+    --tablist-content: var(--darcula-green); /* TODO add color */
 }

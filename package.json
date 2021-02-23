@@ -16,6 +16,8 @@
     "electron": "^11.2.3"
   },
   "dependencies": {
-    "custom-electron-titlebar": "^3.2.6"
+    "custom-electron-titlebar": "^3.2.6",
+    "monaco-editor": "^0.22.3",
+    "monaco-loader": "^1.0.0"
   }
 }

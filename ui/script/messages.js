@@ -1,5 +1,3 @@
-const {ipcRenderer} = require("electron");
-
 window.addEventListener("load",() => {
     ipcRenderer.on("slideMessage",(event, args) => {
         const div = document.createElement("div");

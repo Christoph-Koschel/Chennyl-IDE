@@ -25,7 +25,12 @@
     width: min-content;
 }
 
-.workMiddleTopBar ul li span {
+.workMiddleTopBar ul li span.name {
+    width: 5px;
+    white-space: nowrap !important;
+}
+
+.workMiddleTopBar ul li span.closeButton {
     width: 10px;
     height: 10px;
     text-align: center;
@@ -34,9 +39,9 @@
     border: none;
 }
 
-.workMiddleTopBar ul li span:hover {
+.workMiddleTopBar ul li span.closeButton:hover {
     background-color: var(--tablist-content);
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
 .workMiddleTopBar ul li.active {
