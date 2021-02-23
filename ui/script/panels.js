@@ -110,6 +110,27 @@ window.addEventListener("load", () => {
         }
     });
 
+    (() => {
+        document.getElementsByClassName("window-close-bg")[0].remove();
+        let div1 = document.createElement("div");
+        div1.classList.add("window-close-bg");
+        div1.classList.add("window-icon-bg");
+        div1.title = "Close";
+
+        let div2 = document.createElement("div");
+        div2.classList.add("window-icon");
+        div2.classList.add("window-close");
+        div2.addEventListener("click", () => {
+            document.getElementById("closeButton").click();
+        });
+        div1.appendChild(div2);
+        document.getElementsByClassName("window-controls-container")[0].appendChild(div1);
+    })()
+
+    document.getElementById('closeButton').addEventListener('click', () => {
+        remote.getCurrentWindow().close();
+    });
+
     updateEditorSize();
 });
 

@@ -1,5 +1,6 @@
 const fs = require("fs");
-const {Menu, MenuItem} = require("electron").remote;
+const {remote} = require("electron");
+const {Menu, MenuItem} = remote;
 const {Color, Themebar, Titlebar} = require('custom-electron-titlebar');
 
 global.__root = __dirname;
@@ -13,12 +14,6 @@ menu.append(new MenuItem({
     submenu: [
         {
             label: "Project"
-        },
-        {
-            label: "File"
-        },
-        {
-            label: "Directory"
         }
     ]
 }));
@@ -26,7 +21,8 @@ menu.append(new MenuItem({
     label: "File",
     submenu: [
         {
-            label: "Open"
+            label: "Open",
+            click: () => ipcRenderer.send("titlebar-button", "open")
         }
     ]
 }));

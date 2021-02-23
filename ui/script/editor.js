@@ -10,14 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "Ctrl-Space": "autocomplete",
         },
         autoHint: true,
+        lineWrapping: true,
     });
-    codeMirror.setSize("100%", "100%", true);
 
-    /* .on("keyup", (cm, event) => {
-        if(!cm.state.completionActive && event.keyCode !== 13 && event.keyCode !== 27) {
-            CodeMirror.commands.autocomplete(cm, null, { completeSingle: false })
-        }
-    }); */
+    codeMirror.setSize("100%", "100%", true);
 
     window.codeMirror = codeMirror;
 });

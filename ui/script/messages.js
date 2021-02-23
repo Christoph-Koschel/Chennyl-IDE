@@ -1,5 +1,3 @@
-const {ipcRenderer} = require("electron");
-
 window.addEventListener("load",() => {
     ipcRenderer.on("slideMessage",(event, args) => {
         const div = document.createElement("div");
@@ -19,4 +17,15 @@ window.addEventListener("load",() => {
         div.appendChild(a);
         document.body.appendChild(div);
     });
+
+    setTimeout(() => {
+        console.log("send message ...");
+        let message = new ConfirmWindow("hallo", "info");
+        message.on("change",(event) => {
+            console.log(event.status);
+            console.log(event.status === ConfirmWindow.YES);
+        });
+        message.show();
+        console.log("sended")
+    },5*1000);
 });

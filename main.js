@@ -1,5 +1,5 @@
-const {BrowserWindow, app} = require("electron");
-const {SlideMessage} = require("chennyl-ide-module/message");
+const {BrowserWindow, app, ipcMain, dialog} = require("electron");
+require("./chennylModule");
 // Darwin == MacOs
 const fs = require("fs");
 
@@ -8,8 +8,7 @@ global.path = require("path");
 
 app.on("ready", () => {
     const windowOptions = JSON.parse(fs.readFileSync(path.join(__root, "ui", "window.json"), "utf8"));
-    console.log(windowOptions);
-    let win = new BrowserWindow({
+    global.win = new BrowserWindow({
         width: windowOptions.width,
         height: windowOptions.height,
         frame: false,
@@ -29,13 +28,19 @@ app.on("ready", () => {
         }
     });
 
-    SlideMessage.on("message", (event, args) => {
-        console.log("new Message");
-        win.webContents.send("slideMessage", args);
+    win.on("close", win.destroy);
+
+    /* win.webContents.on("dom-ready", () => {
+    win.webContents.send("open-file", [ path.join(__root, "titlebar.js"), path.join(__root, "main.js") ]);
+    }) */
+
+    ipcMain.on("titlebar-button", (event, args) => {
+        // win.webContents.send("titlebar-button", args);
+        if(args === "open") {
+            dialog.showOpenDialog({ properties: ['openFile'] })
+                .then(result => {
+                    win.webContents.send("open-file", result.filePaths);
+                });
+        }
     });
 });
-
-setTimeout(() => {
-    const message = new SlideMessage("Hallo wie gehts","info");
-    message.show();
-},5*1000);
