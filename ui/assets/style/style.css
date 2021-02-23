@@ -44,3 +44,9 @@ body {
 .container-after-titlebar {
     overflow: hidden !important;
 }
+
+.noDrag {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-focus: ignore;
+}

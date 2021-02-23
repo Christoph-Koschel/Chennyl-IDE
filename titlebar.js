@@ -36,8 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let titlebar = new Titlebar({
         backgroundColor: Color.fromHex(windowOptions.titlebar.background),
         iconsTheme: (process.platform === "darwin") ? Themebar.mac : Themebar.win,
-        icon: "./assets/icon/icon.svg"// path.join(__root, "ui", "assets", "icon", "icon.svg")
+        icon: "./assets/icon/icon.svg"
     });
-    // titlebar.updateTitle("");
     titlebar.updateMenu(menu);
 });

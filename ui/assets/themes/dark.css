@@ -1,7 +1,11 @@
 :root {
+    --font-color: #fff;
     --middle-content: #333333;
     --left-content: #4e4e4e;
     --header-content: #666666;
+    --sitebar-content: #3b3b3b;
+    --sitebar-content-active: #4c4c4c;
+    --sitebar-content-hover: #6d6d6d;
     --window-background: #ccc;
     --navigation-background: #ffff;
     --messageNotification-color: #fff;

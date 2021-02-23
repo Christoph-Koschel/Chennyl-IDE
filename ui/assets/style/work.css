@@ -5,8 +5,8 @@
     display: grid;
     grid-template-areas:
         'header header header header header'
-        'left middle middle middle middle'
-        'left middle middle middle middle';
+        'sitebar left middle middle middle'
+        'sitebar left middle middle middle';
     grid-template-rows:
         25px
         auto
@@ -14,6 +14,7 @@
     ;
 
     grid-template-columns:
+        26px
         250px
         auto
     ;
@@ -22,16 +23,57 @@
 .workHeader {
     background-color: var(--header-content);
     grid-area: header;
+    height: 25px;
+    min-height: 25px;
 }
 
 .workLeft {
     background-color: var(--left-content);
     grid-area: left;
-    resize: horizontal;
-    overflow: auto;
+}
+
+.workSiteBar {
+    grid-area: sitebar;
+    background-color: var(--sitebar-content);
+}
+
+.workSiteBar > span {
+    font-weight: lighter;
+    font-size: 13px;
+    padding: 5px 3px;
+    cursor: default;
+    display: block;
+    color: var(--font-color);
+    writing-mode: vertical-rl;
+}
+
+.workSiteBar > span:hover {
+    background-color: var(--sitebar-content-hover);
+}
+
+.workSiteBar > span.active {
+    background-color: var(--sitebar-content-active);
 }
 
 .workMiddle {
+    display: inline-grid;
     background-color: var(--middle-content);
     grid-area: middle;
+    grid-template-areas:
+        'navbar'
+        'writer'
+    ;
+    grid-template-columns: auto;
+    grid-template-rows:
+        22px
+        auto
+    ;
+}
+
+.editorNavbar {
+    grid-area: navbar;
+}
+
+.editorWriter {
+    grid-area: writer;
 }

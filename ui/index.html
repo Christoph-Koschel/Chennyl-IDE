@@ -11,35 +11,48 @@
     <link rel="stylesheet" href="./assets/themes/darcula.css">
     <link rel="stylesheet" href="./script/lib/show-hint.css">
 
+    <!-- Writer -->
     <script src="./script/vars.js"></script>
-    <script src="./script/panels.js"></script>
-    <script src="./script/tabbing.js"></script>
     <script src="./script/lib/codemirror.js"></script>
     <script src="./assets/highlighters/js/script.js"></script>
     <script src="./assets/highlighters/js/matchbracktes.js"></script>
-    <script src="./script/lib/show-hint.js"></script>
-    <script src="./script/lib/html-hint.js"></script>
-    <script src="./script/lib/javascript-hint.js"></script>
+    <script src="./script/editor.js"></script>
+
+    <!-- UI -->
+    <script src="./script/panels.js"></script>
+    <script src="./script/tabbing.js"></script>
+    <script src="./script/TabHandler.js"></script>
+
+    <!-- Hints -->
     <script src="./script/lib/sql-hint.js"></script>
     <script src="./script/lib/xml-hint.js"></script>
     <script src="./script/lib/css-hint.js"></script>
-    <script src="./script/editor.js"></script>
+    <script src="./script/lib/show-hint.js"></script>
+    <script src="./script/lib/html-hint.js"></script>
+    <script src="./script/lib/javascript-hint.js"></script>
+
+    <!-- FS -->
     <script src="./script/FileHandler.js"></script>
-    <script src="./script/TabHandler.js"></script>
+
+    <!-- Chennyl-IDE-Module -->
     <script src="./script/messages.js"></script>
+
 </head>
 <body>
 
 <div class="workGrid">
     <div class="workHeader">
-        a
-    </div>
-    <div class="workLeft">
 
     </div>
+    <div class="workSiteBar">
+        <span class="siteBarLink noDrag">Project</span>
+    </div>
+    <div class="workLeft">
+        b
+    </div>
     <div class="workMiddle">
-        <div class="workMiddleTopBar"></div>
-        <div class="editorContainer" id="editorContainer"></div>
+        <div class="workMiddleTopBar editorNavbar"></div>
+        <div class="editorContainer editorWriter" id="editorContainer"></div>
     </div>
 </div>
 
